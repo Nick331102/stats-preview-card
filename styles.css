@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: hsl(233, 47%, 7%);
+    --card-bg-color: hsl(244, 38%, 16%);
+    --accent-color: hsl(277, 64%, 61%);
+    --main-heading-stats: hsl(0, 0%, 100%);
+    --main-paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --stat-color: hsla(0, 0%, 100%, 0.6);
+}
+
+
+body {
+    background-color: var(--main-bg-color);
+
+}
+
+.card {
+    max-width: 1100px;
+    max-height: 446px;
+    background-color: var(--card-bg-color);
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+    flex-direction: row-reverse;
+    border-radius: 8px;
+}
+
+.hero__image {
+    flex: 1;
+    position: relative;
+
+}
+
+.desktop__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 75%;
+}
+
+.purple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: var(--accent-color);
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    opacity: 80%;
+}
+
+.contents {
+    flex: 1;
+    margin: 50px 40px;
+    text-align: left;
+}
+
+.business {
+    font-size: 2.4rem;
+    color: var(--main-heading-stats);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 25px;
+}
+
+
+.insights {
+    color: var(--accent-color);
+}
+
+.description {
+    font-family: 'Lexend', sans-serif;
+    color: var(--main-paragraph-color);
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+
+
+.content__group {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+
+}
+
+.stats {
+    margin-right: 90px;
+
+}
+
+.numbers {
+    color: var(--main-heading-stats);
+    font-size: 2.0rem;
+}
+
+.stat__details {
+    color: var(--stat-color);
+    font-size: 1.3rem;
+
+}
+
+.mobile__img {
+    display: none;
+
+}
+
+@media (max-width:1000px) {
+
+    .desktop__img {
+        display: none;
+    }
+
+    .mobile__img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        opacity: 75%;
+        border-top-right-radius: 5px;
+        ;
+        border-top-left-radius: 5px;
+        ;
+    }
+
+    .purple {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background: var(--accent-color);
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        opacity: 80%;
+    }
+
+    .card {
+        margin: 50px 10px;
+        display: block;
+        max-height: none;
+    }
+
+    .content__group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .contents {
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .stats {
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+
+}
